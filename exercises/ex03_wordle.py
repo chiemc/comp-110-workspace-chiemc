@@ -7,7 +7,6 @@ def main(secret: str) -> None:
     """The entrypoint of the program and main game loop"""
     turn_number: int = 1
     # number of turns is the variable to track
-    # guess is the variable to track
     while turn_number <= 6:
         print(f"=== Turn {turn_number}/6 ===")
         guess: str = input_guess(secret_word_len=len(secret))
@@ -17,13 +16,14 @@ def main(secret: str) -> None:
         print(answer)
         if guess == secret:
             print(f"You won in {turn_number}/6 turns!")
-            exit(1)
+            return None
+        # using exit() deducted points, so try return None
         turn_number += 1
     if turn_number > 6:
         print("X/6 - Sorry, try again tomorrow!")
 
 
-def input_guess(secret_word_len: int):
+def input_guess(secret_word_len: int) -> str:
     """Takes user input and determines the length of the secret word"""
     guess: str = input(f"Enter a {secret_word_len} character word: ")
     # use the f string for convenience
@@ -34,7 +34,7 @@ def input_guess(secret_word_len: int):
     return guess
 
 
-def contains_char(secret_word: str, char_guess: str):
+def contains_char(secret_word: str, char_guess: str) -> bool:
     """Receives a string that is expected to be one character"""
     """And another string that will be searched through for a match"""
     assert len(char_guess) == 1
@@ -51,7 +51,7 @@ def contains_char(secret_word: str, char_guess: str):
     # iterate over each index first, if match then track it, then return True or False
 
 
-def emojified(guess: str, secret: str):
+def emojified(guess: str, secret: str) -> str:
     """Outputs the emojis for the user"""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C"
