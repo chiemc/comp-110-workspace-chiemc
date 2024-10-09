@@ -3,24 +3,24 @@
 __author__ = "730754245"
 
 
-def w_sum(vals: list[float]) -> None:
+def w_sum(vals: list[float]) -> float:
     idx: int = 0
     total: float = 0.0
     while idx < len(vals):
         total += vals[idx]
         idx += 1
-    print(total)
+    return total
 
 
-def f_sum(vals: list[float]) -> None:
+def f_sum(vals: list[float]) -> float:
     total: float = 0.0
     for numbers in vals:
         total += numbers
-    print(total)
+    return total
 
 
-def f_range_sum(vals: list[float]) -> None:
+def f_range_sum(vals: list[float]) -> float:
     total: float = 0.0
     for numbers in range(0, len(vals)):
         total += vals[numbers]
-    print(total)
+    return total
