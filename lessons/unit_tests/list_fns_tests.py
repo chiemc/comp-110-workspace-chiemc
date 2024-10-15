@@ -21,7 +21,7 @@ def test_remove_first_behavior() -> None:
     assert fruits == ["oranges", "bananas"]
 
 
-def get_and_remove_first_test() -> None:
+def test_get_and_remove_first() -> None:
     """Test that get and remove first removes first element and returns it"""
     fruits: list[str] = ["apples", "oranges", "bananas"]
     assert get_and_remove_first(fruits) == "apples"
