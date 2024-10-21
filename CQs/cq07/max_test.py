@@ -1,5 +1,8 @@
 """Testing find_max"""
 
+__author__ = "730754245"
+
+
 from CQs.cq07.find_max import find_and_remove_max
 
 

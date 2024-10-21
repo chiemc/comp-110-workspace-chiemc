@@ -1,3 +1,6 @@
+__author__ = "730754245"
+
+
 def find_and_remove_max(numbers: list[int]) -> int:
     """Returns and removes the largest number in the list"""
     if numbers == []:
