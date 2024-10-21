@@ -13,8 +13,3 @@ def find_and_remove_max(numbers: list[int]) -> int:
         else:
             idx += 1
     return largest_number
-
-
-a: list[int] = [1, 2, 3, 3]
-find_and_remove_max(a)
-print(a)
