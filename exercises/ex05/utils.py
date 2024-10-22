@@ -25,6 +25,10 @@ def sub(numbers: list[int], start_index: int, end_index: int) -> list[int]:
     return sub_set
 
 
-def add_at_index(numbers: list[int], add_element: int, desired_element_index: int) -> None:
-    if desired_element_index < 0 or desired_element_index > len(numbers):
-        
+def add_at_index(numbers: list[int], add_element: int, desired_index: int) -> None:
+    if desired_index < 0 or desired_index > len(numbers):
+        raise IndexError("Index is out of bounds for the input list")
+    numbers.append(add_element)
+    
+    numbers[desired_index] = add_element
+    return None
