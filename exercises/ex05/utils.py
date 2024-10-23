@@ -18,7 +18,7 @@ def sub(numbers: list[int], start_index: int, end_index: int) -> list[int]:
     if end_index > len(numbers):
         end_index = len(numbers)
     if len(numbers) == 0 or start_index >= len(numbers) or end_index <= 0:
-        return numbers
+        return []
     for elem in range(start_index, end_index):
         # range incldues start_index but NOT end_index, no need to decrement end_index
         sub_set.append(numbers[elem])
@@ -35,5 +35,6 @@ def add_at_index(numbers: list[int], add_element: int, desired_index: int) -> No
         # shifts all elements above desired_index to make space for the new element
         # start from the end of the list, shift right to higher indices
         numbers[elem] = numbers[elem - 1]
+        # expressions are read right to left, not left to right chevy
     numbers[desired_index] = add_element
     return None
