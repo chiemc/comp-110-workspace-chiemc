@@ -14,9 +14,9 @@ def test_only_evens() -> None:
 
 
 def test_only_evens_edge_case() -> None:
-    """Tests the edge case of negative numbers"""
-    numbers: list[int] = [-1, -2, -3, -4]
-    assert only_evens(numbers) == [-2, -4]
+    """Tests the edge case of empty list"""
+    numbers: list[int] = []
+    assert only_evens(numbers) == []
 
 
 def test_only_evens_mutation() -> None:
@@ -32,9 +32,9 @@ def test_sub() -> None:
 
 
 def test_sub_edge_case() -> None:
-    """Tests the edge case of negative numbers"""
-    a: list[int] = [-20, -40, -60, -80, -100]
-    assert sub(a, 1, 3) == [-40, -60]
+    """Tests the edge case of negative start index"""
+    a: list[int] = [20, 40, 60, 80, 100]
+    assert sub(a, -1, 3) == [20, 40, 60]
 
 
 def test_sub_mutation() -> None:
