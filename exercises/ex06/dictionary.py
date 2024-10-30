@@ -27,3 +27,33 @@ def favorite_color(fav: dict[str, str]) -> str:
             highest_color = color
             highest_count = counter[color]
     return highest_color
+
+
+def count(list1: list[str]) -> dict[str, int]:
+    key: dict[str, int] = {}
+    for word in list1:
+        if word in key:
+            key[word] += 1
+        else:
+            key[word] = 1
+    return key
+
+
+def alphabetizer(list1: list[str]) -> dict[str, list[str]]:
+    key: dict[str, list[str]] = {}
+    for word in list1:
+        first_letter = word[0].lower()
+        if first_letter in key:
+            key[first_letter].append(word)
+        else:
+            key[first_letter] = [word]
+    return key
+
+
+def update_attendance(dict1: dict[str, list[str]], day: str, student: str) -> None:
+    if day in dict1:
+        if student not in dict1[day]:
+            dict1[day].append(student)
+        else:
+            dict1[day] = [student]
+    return None
