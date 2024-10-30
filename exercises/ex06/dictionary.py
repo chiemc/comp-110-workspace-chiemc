@@ -51,9 +51,10 @@ def alphabetizer(list1: list[str]) -> dict[str, list[str]]:
 
 
 def update_attendance(dict1: dict[str, list[str]], day: str, student: str) -> None:
-    if day in dict1:
-        if student not in dict1[day]:
-            dict1[day].append(student)
-        else:
-            dict1[day] = [student]
+    if day not in dict1:
+        dict1[day] = []
+    if student not in dict1[day]:
+        dict1[day].append(student)
+    else:
+        dict1[day] = [student]
     return None
