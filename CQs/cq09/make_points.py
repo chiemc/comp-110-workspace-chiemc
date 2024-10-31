@@ -1,10 +1,10 @@
 from CQs.cq09.point import Point
 
 
-obj1: Point = Point(2.0, 3.0)
+point: Point = Point(2.0, 3.0)
 
-obj1.scale_by(2)
-print(obj1.x, obj1.y)
+point.scale_by(2)
+print(point.x, point.y)
 
-scaled_obj = obj1.scale(3)
-print(scaled_obj.x, scaled_obj.y)
+scaled_point = point.scale(3)
+print(scaled_point.x, scaled_point.y)
