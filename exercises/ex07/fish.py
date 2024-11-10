@@ -4,7 +4,7 @@
 class Fish:
     age: int
 
-    def __init__(self, a: int):
+    def __init__(self):
         self.age: int = 0
         return None
 
