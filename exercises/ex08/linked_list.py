@@ -1,6 +1,8 @@
+"""Ex08 Linked list utility functions."""
+
+
 from __future__ import annotations
 
-"""Ex08 linked list utils."""
 
 __author__ = "730754245"
 
